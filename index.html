@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok IMK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="container">
+        <div class="slide-1" id="slide">
+                <div class="con-progresBar">
+                    <div class="roundProgres success">
+                        <p>Pilihan Beasiswa</p>
+                    </div>
+                    <span class="line"></span>
+                    <div class="roundProgres">
+                        <p>Daftar</p>
+                    </div>
+                    <span class="line"></span>
+                    <div class="roundProgres">
+                        <p>Hasil</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <p>Silakan Pilih Salah Satu</p>
+                    <div class="beasiswa-item">
+                        <h2>Beasiswa Akademik</h2>
+                        <p>Merupakan dukungan finansial bagi prestasi tinggi dalam studi. Fokus nilai, peringkat, dan prestasi akademik lainnya. Mendorong pengembangan intelektual.</p>
+                    </div>
+                    <div class="beasiswa-item">
+                        <h2>Beasiswa Non-Akademik</h2>
+                        <p>Merupakan bantuan finansial berdasarkan bakat, seni, olahraga, sosial, dan kontribusi positif lainnya. Menghargai nilai di luar prestasi akademik.</p>
+                    </div>
+                    <div class="btnLanjut" onclick="gotoSlide(2)">
+                        Selanjutnya
+                    </div>
+                </div>  
+        </div>
+        
+        <div class="slide-2" id="slide">
+            <div class="con-progresBar">
+                <div class="roundProgres success">
+                    <p>Pilihan Beasiswa</p>
+                </div>
+                <span class="line success"></span>
+                <div class="roundProgres success">
+                    <p>Daftar</p>
+                </div>
+                <span class="line"></span>
+                <div class="roundProgres">
+                    <p>Hasil</p>
+                </div>
+            </div>
+            <div class="form">
+                <form id="formSlide2">
+                    <h2>Registrasi Beasiswa</h2>
+                    <div class="form-group">
+                      <label for="nama">Nama Lengkap</label>
+                      <input type="text" id="nama" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="no_hp">No. HP</label>
+                      <input type="tel" pattern="[0-9]+" title="Harap masukkan hanya angka" id="no_hp" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="semester">Semester</label>
+                      <select id="semester" required>
+                        <option value="" disabled selected>Pilih Semester</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                      </select>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="ipk_terakhir">IPK Terakhir</label>
+                      <input type="number" step="0.01" id="ipk_terakhir" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="beasiswa">Pilihan Beasiswa</label>
+                      <select id="beasiswa" required>
+                        <option value="" disabled selected>Pilih Beasiswa</option>
+                        <option value="Beasiswa Akademik">Beasiswa Akademik</option>
+                        <option value="Beasiswa Non-Akademik">Beasiswa Non-Akademik</option>
+                        <!-- Add options based on slide 1 selections -->
+                      </select>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="berkas_syarat">Upload Berkas Syarat</label>
+                      <input type="file" id="berkas_syarat" required>
+                    </div>
+                  </form>
+                  <div class="form-group">
+                    <button class="btnKembali" onclick="gotoSlide(1)">Kembali</button>
+                    <button class="btnLanjut" id="btnSlide2" onclick="gotoSlide(3)">Lanjut</button>
+                  </div>
+              
+            </div>
+        </div>
+
+        <div class="slide-3" id="slide">
+          <div class="con-progresBar">
+            <div class="roundProgres success">
+                <p>Pilihan Beasiswa</p>
+            </div>
+            <span class="line success"></span>
+            <div class="roundProgres success">
+                <p>Daftar</p>
+            </div>
+            <span class="line success"></span>
+            <div class="roundProgres success">
+                <p>Hasil</p>
+            </div>
+          </div>  
+          <div class="form3">
+            <div id="diterima">
+              <img src="img/1.gif" alt="Illustrasi Diterima">
+              <div class="desc">
+                <h2>Selamat <span id="nickname">Raldy</span>, Anda telah Diterima dengan Kategori <span id="namaBeasiswa">Beasiswa Non-Akademik</span>!</h2>
+                <p>Beasiswa ini adalah bukti bahwa kamu memiliki potensi besar dan masa depan yang cerah. Gunakan kesempatan ini untuk terus mengembangkan diri dan memberikan dampak positif bagi lingkungan sekitarmu. <b>Kami akan menghubungimu untuk informasi selajutnya!</b></p>
+                <a href=""><div class="btn-kembali">Kembali ke Beranda</div></a>
+              </div>
+            </div>
+            <div id="tidakDiterima">
+              <img src="img/2.gif" alt="Illustrasi Diterima">
+              <div class="desc">
+                <h2>Maaf <span id="nickname">Raldy</span>, Anda tidak diterima untuk Kategori <span id="namaBeasiswa">Beasiswa Non-Akademik</span> :(</h2>
+                <p>Setiap orang memiliki masa sulit dalam mencapai tujuan mereka. Tidak mendapatkan beasiswa kali ini bukan akhir dari cerita. Terus berusaha dan teruskan perjalananmu menuju kesuksesan. <b>Tetap Semangat!!!</b></p>
+                <a href=""><div class="btn-kembali">Kembali ke Beranda</div></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <p class="footer">Copyright©2023 By Raldy Achmad</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
