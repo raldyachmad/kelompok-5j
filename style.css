@@ -280,3 +280,44 @@ div.beasiswa-item p{
   display:none;
 }
 
+@media (max-width: 768px) {
+  .container{
+    width: 90%;
+    padding: 20px;
+  }
+
+  .roundProgres{
+    width: 75px;
+    height: 75px;
+    border-width: 4px;
+  }
+
+  .roundProgres p{
+    font-size: 9px;
+  }
+
+  .line{
+    width: 30px;
+    height: 4px;
+  }
+
+  .form{
+    padding: 25px 0;
+  }
+  .slide-1 .form .beasiswa-item{
+    padding: 20px;
+  }
+
+  div.beasiswa-item h2{
+    font-size: 16px;
+  }
+  div.beasiswa-item p{
+    font-size: 10px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-weight:400;
+    /* text-align: justify; */
+  }
+}
+
+
