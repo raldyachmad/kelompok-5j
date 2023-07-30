@@ -1,118 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 :root {
-    --primary-color: #1e1e1e;
-    --primaryHover-color: #494949;
-    --secondary-color:#a7a7a7;
-    --white-color: #fff;
-    --p: 1rem;
-    --h1: 
-
-  }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    /* color: var(--primary-color); */
+  --primary-color: #1e1e1e;
+  --primaryHover-color: #494949;
+  --secondary-color: #a7a7a7;
+  --white-color: #fff;
+  --p: 1rem;
+  --h1: ;
 }
 
-body{
-    background-color: #efefef;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    /* padding: 20px 0; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* color: var(--primary-color); */
 }
 
-.container{
-    width: 60vw;
-    /* height: 95vh; */
-    border-radius: 8px;
-    border-top: 8px solid var(--primary-color);
-    background-color: #fff;
-    margin: 20px;
-    padding: 30px;
+body {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  /* padding: 20px 0; */
 }
 
-.footer{
-    text-align: center;
-    margin: 20px;
+.container {
+  width: 60vw;
+  /* height: 95vh; */
+  border-radius: 8px;
+  border-top: 8px solid var(--primary-color);
+  background-color: #fff;
+  margin: 20px;
+  padding: 30px;
 }
 
-.con-progresBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 50px;
-    height: 20%;
-    width: 100%;
-    /* gap: 80px; */
+.footer {
+  text-align: center;
+  margin: 20px;
 }
 
-.roundProgres{
-    display: flex;
-    width: 91px;
-    height: 91px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border: 5px solid var(--secondary-color);
+.con-progresBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 50px;
+  height: 20%;
+  width: 100%;
+  /* gap: 80px; */
 }
 
-.roundProgres p{
-    display: flex;
-    text-align: center;
-    font-size: 14px;
-    color: var(--secondary-color);
+.roundProgres {
+  display: flex;
+  width: 91px;
+  height: 91px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 5px solid var(--secondary-color);
 }
 
-.line{
-    width: 70px;
-    height: 5px;
-    background-color: var(--secondary-color);
+.roundProgres p {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  color: var(--secondary-color);
 }
 
-.form{
-    height: 80%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+.line {
+  width: 70px;
+  height: 5px;
+  background-color: var(--secondary-color);
 }
 
-.slide-1 .form p:nth-child(1){
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 16px;
+.form {
+  height: 80%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
-.slide-1 .form .beasiswa-item{
-    border-radius: 8px;
-    border: 1px solid var(--primary-color);
-    padding: 30px;
-    background-color: var(--white-color);
-    background-image: url(img/beasiswa.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-    box-shadow: 8px 8px 0px 0px var(--primary-color);
-    margin-bottom: 20px;
-    cursor: pointer;
-    user-select: none;
+.slide-1 .form p:nth-child(1) {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px;
 }
 
-div.beasiswa-item h2{
-    font-size: 22px;
+.slide-1 .form .beasiswa-item {
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  padding: 30px;
+  background-color: var(--white-color);
+  background-image: url(img/beasiswa.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 8px 8px 0px 0px var(--primary-color);
+  margin-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
 }
-div.beasiswa-item p{
-    font-size: 12px;
-    margin-top: 6px;
-    margin-bottom: 0;
-    font-weight:400;
+
+div.beasiswa-item h2 {
+  font-size: 22px;
+}
+div.beasiswa-item p {
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-weight: 400;
 }
 
 /* .slide-1 .form .beasiswa-item:hover{
@@ -120,152 +119,154 @@ div.beasiswa-item p{
     color: #FFF !important;
     box-shadow: 8px 8px 0px 0px var(--primaryHover-color);
   } */
-.active{
+.active {
   background-color: var(--primary-color) !important;
-  color: #FFF !important; 
+  color: #fff !important;
   box-shadow: 8px 8px 0px 0px var(--primaryHover-color) !important;
   transition: 0.4s;
 }
 
-.active p{
+.active p {
   color: #d4d4d4;
 }
 
-.btnLanjut{
-    padding: 16px 20px;
-    width: 150px;
-    text-align: center;
-    border-radius: 8px;
-    color: #FFF;
-    border: 2px solid var(--secondary-color);
-    background: var(--primary-color);
-    cursor: pointer;
-    margin: 6px 0 0px auto;
+.btnLanjut {
+  padding: 16px 20px;
+  width: 150px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  border: 2px solid var(--secondary-color);
+  background: var(--primary-color);
+  cursor: pointer;
+  margin: 6px 0 0px auto;
 }
 
-.btnLanjut:active{
-    border: 2px solid var(--secondary-color);
-    background: var(--primaryHover-color);
+.btnLanjut:active {
+  border: 2px solid var(--secondary-color);
+  background: var(--primaryHover-color);
 }
 
 /* Awal Slide 1 */
-.roundProgres.success{
-    border-color:var(--primary-color);
-    
+.roundProgres.success {
+  border-color: var(--primary-color);
 }
-.roundProgres p{
-    color: var(--primary-color);
+.roundProgres p {
+  color: var(--primary-color);
 }
 /* Akhir Slide 1 */
 
-
 /* Awal Slide 2 */
-.line.success{
-    background-color: var(--primary-color) !important;
+.line.success {
+  background-color: var(--primary-color) !important;
 }
 /* Akhir Slide 2 */
 
 /* form */
 
 .form-wrapper {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .slide {
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-  }
-  
-  .slide h1 {
-    margin-top: 0;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: inline-block;
-    margin-bottom: 5px;
-    /* font-weight: bold; */
-  }
-  
-  input, select, button {
-    width: 70%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+  width: 80%;
+  margin: 0 auto;
+}
 
-  label::after {
-    content: "*";
-    color: red;
-  }
-  
-  .form form h2{
-    margin-bottom: 40px;
-    
-  }
+.slide {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
 
-  .form-group button{
-    padding: 16px 20px;
-    width: 48%;
-    text-align: center;
-    border-radius: 8px;
-    color: #FFF;
-    border: 2px solid var(--primary-color);
-    background: var(--primary-color);
-    cursor: pointer;
-    justify-content: space-between;
-    margin-top: 20px;
-    /* font-size: inherit; */
-  }
+.slide h1 {
+  margin-top: 0;
+}
 
-  .form-group button:nth-child(1){
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background: #fff;
-  }
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  /* font-weight: bold; */
+}
+
+input,
+select,
+button {
+  width: 70%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label::after {
+  content: "*";
+  color: red;
+}
+
+.form form h2 {
+  margin-bottom: 40px;
+}
+
+.form-group button {
+  padding: 16px 20px;
+  width: 48%;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  border: 2px solid var(--primary-color);
+  background: var(--primary-color);
+  cursor: pointer;
+  justify-content: space-between;
+  margin-top: 20px;
+  /* font-size: inherit; */
+}
+
+.form-group button:nth-child(1) {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background: #fff;
+}
 /* akhir form */
 
-
 /* Slide 3 */
-.slide-3 div.form3 div{
+.slide-3 div.form3 div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: aquamarine; */
+  text-align: center;
+  /* background-color: magenta; */
 }
-.slide-3 div.form3 div img{
+.slide-3 div.form3 div img {
   width: 250px;
-  margin-bottom: 50px;
-  align-self: center;
+  margin: 50px 0 ;
+  
 }
 
-.form3 div div.desc{
+.form3 div div.desc {
+  margin: auto;
   width: 85%;
+  text-align: left;
 }
-.form3 div .desc p{
+
+.form3 div .desc p {
   margin-top: 8px;
   margin-bottom: 20px;
-  text-align: justify;
   color: var(--primary-color);
+  text-align: justify;
 }
 
-::selection{
+::selection {
   background-color: var(--secondary-color);
   color: var(--white-color);
 }
 
-.form3 div .btn-kembali{
-  margin: 20px 0 20px 0;
+.form3 div .btn-kembali {
+  margin: 20px 0 60px 0;
   background-color: var(--primary-color);
   border: 2px solid var(--white-color);
   border-radius: 4px;
@@ -274,67 +275,71 @@ div.beasiswa-item p{
   cursor: pointer;
 }
 
-.form3 div .btn-kembali:hover{
+.form3 div .btn-kembali:hover {
   border: 2px solid var(--secondary-color);
 }
-
 /* Akhir Slide 3 */
 
-.slide-3,.slide-2,#diterima,#tidakDiterima{
-  display:none;
+
+.slide-3,
+.slide-2,
+#diterima,
+#tidakDiterima {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .container{
+  .container {
     width: 90%;
     padding: 20px;
   }
 
-  .roundProgres{
+  .roundProgres {
     width: 80px;
     height: 80px;
     border-width: 4px;
   }
 
-  .roundProgres p{
+  .roundProgres p {
     font-size: 12px;
   }
 
-  .line{
+  .line {
     width: 30px;
     height: 4px;
   }
 
-  .form{
+  .form {
     padding: 25px 0;
   }
-  .slide-1 .form .beasiswa-item{
+  .slide-1 .form .beasiswa-item {
     padding: 20px;
   }
 
-  div.beasiswa-item h2{
+  div.beasiswa-item h2 {
     font-size: 18px;
   }
-  div.beasiswa-item p{
+  div.beasiswa-item p {
     font-size: 12px;
     margin-top: 6px;
     margin-bottom: 0;
-    font-weight:400;
+    font-weight: 400;
     /* text-align: justify; */
   }
-  .form-group{
+  .form-group {
     flex-direction: column;
     align-items: baseline;
   }
 
-  .form-group input, .form-group select{
+  .form-group input,
+  .form-group select {
     width: 100%;
   }
 
-  .form-group.btn{
+  .form-group.btn {
     flex-direction: row;
   }
-  .form-group.btn button{
+  .form-group.btn button {
     width: 48%;
   }
 }
