@@ -73,6 +73,9 @@ function showResult() {
     diterima.querySelector('#namaBeasiswa').textContent=inputBeasiswa;
   }  else{
     tidakDiterima.style.display='block';
+    const pisahNama = document.getElementById('nama').value.split(" ")
+    const fistName = pisahNama[0];
+    const inputBeasiswa = document.getElementById('beasiswa').value;
     diterima.querySelector('#nickname').textContent=fistName;
     diterima.querySelector('#namaBeasiswa').textContent=inputBeasiswa;
   }
