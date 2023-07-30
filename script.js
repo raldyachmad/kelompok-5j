@@ -1,34 +1,3 @@
-// btnKembali = document.querySelector(".btnKembali");
-// btnLanjut = document.querySelectorAll('.btnLanjut')
-// slide1 = document.querySelector(".slide-1");
-// slide2 = document.querySelector(".slide-2");
-// slide3 = document.querySelector(".slide-3");
-// currentSlide = null;
-
-// if (slide2.display == "none" && slide3.display == "none") {
-//   currentSlide = slide1;
-// } else if (slide1.display == "none" && slide3.display == "none") {
-//   currentSlide = slide2;
-// } else if (slide1.display == "none" && slide2.display == "none"){
-//   currentSlide = slide3;
-// }
-
-// btnLanjut[0].addEventListener('click',()=>{
-//   slide1.style.display='none'
-//   slide2.style.display='block'
-// })
-// btnLanjut[1].addEventListener('click',()=>{
-//   slide2.style.display='none'
-//   slide3.style.display='block'
-// })
-
-// console.log(currentSlide)
-// btnKembali.addEventListener("click", () => {
-//   alert('berhasil')
-//   slide2.style.display='none'
-//   slide1.style.display='block'
-// });
-
 const beasiswaItem = document.querySelectorAll('div.beasiswa-item')
 const beasiswaForm = document.getElementById('beasiswa')
 
@@ -98,6 +67,7 @@ function showResult() {
     const fistName = pisahNama[0];
     const inputBeasiswa = document.getElementById('beasiswa').value;
     // const kategoriBeasiswa = document.getElementById('namaBeasiswa');
+    tidakDiterima.style.display="none !important"
     diterima.style.display='block';
     diterima.querySelector('#nickname').textContent=fistName;
     diterima.querySelector('#namaBeasiswa').textContent=inputBeasiswa;
@@ -107,5 +77,3 @@ function showResult() {
   }
   
 }
-
-
