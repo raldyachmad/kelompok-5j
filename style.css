@@ -61,7 +61,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 116px;
+    border-radius: 100%;
     border: 5px solid var(--secondary-color);
 }
 
@@ -125,6 +125,10 @@ div.beasiswa-item p{
   color: #FFF !important; 
   box-shadow: 8px 8px 0px 0px var(--primaryHover-color) !important;
   transition: 0.4s;
+}
+
+.active p{
+  color: #d4d4d4;
 }
 
 .btnLanjut{
@@ -287,13 +291,13 @@ div.beasiswa-item p{
   }
 
   .roundProgres{
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     border-width: 4px;
   }
 
   .roundProgres p{
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .line{
@@ -309,7 +313,7 @@ div.beasiswa-item p{
   }
 
   div.beasiswa-item h2{
-    font-size: 16px;
+    font-size: 18px;
   }
   div.beasiswa-item p{
     font-size: 12px;
@@ -318,6 +322,19 @@ div.beasiswa-item p{
     font-weight:400;
     /* text-align: justify; */
   }
+  .form-group{
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .form-group input, .form-group select{
+    width: 100%;
+  }
+
+  .form-group.btn{
+    flex-direction: row;
+  }
+  .form-group.btn button{
+    width: 48%;
+  }
 }
-
-
