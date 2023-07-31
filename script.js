@@ -35,7 +35,6 @@ const btnSlide2 = document.getElementById("btnSlide2");
 
 function checkFormSlide2() {
   if (formSlide2.checkValidity()) {
-    alert("berhasil");
     btnSlide2.disabled = true;
     slide2.style.display = "none";
     slide3.style.display = "block";
