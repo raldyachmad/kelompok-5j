@@ -132,7 +132,10 @@
               <div class="desc">
                 <h2>Selamat <span id="nickname">Null</span>, Anda telah Diterima dengan Kategori <span id="namaBeasiswa">Null</span>!</h2>
                 <p>Beasiswa ini adalah bukti bahwa kamu memiliki potensi besar dan masa depan yang cerah. Gunakan kesempatan ini untuk terus mengembangkan diri dan memberikan dampak positif bagi lingkungan sekitarmu. <b>Kami akan menghubungimu untuk informasi selajutnya!</b></p>
-                <a href=""><div class="btn-kembali">Kembali ke Beranda</div></a>
+                <div class="lihatData">
+                  <a href="result.html"><div class="btn-data">Lihat Data</div></a>
+                  <a href=""><div class="btn-home">Kembali ke Beranda</div></a>
+                </div>
               </div>
             </div>
             <div class="center" id="tidakDiterima">
@@ -152,5 +155,8 @@
     <div class="loader"></div>
 
     <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', loadResult);
+  </script>
 </body>
 </html>
