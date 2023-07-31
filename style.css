@@ -278,6 +278,10 @@ label::after {
 .form3 div .btn-kembali:hover {
   border: 2px solid var(--secondary-color);
 }
+
+a{
+  text-decoration: none;
+}
 /* Akhir Slide 3 */
 
 
@@ -287,6 +291,7 @@ label::after {
 #tidakDiterima {
   display: none;
 }
+
 
 @media (max-width: 768px) {
   .container {
