@@ -38,10 +38,10 @@ const btnSlide2 = document.getElementById("btnSlide2");
 
 function checkFormSlide2() {
   if (formSlide2.checkValidity()) {
-    if (dataMahasiswaArr[0].nama == document.getElementById("nama").value){
+    if (dataMahasiswaArr[0].nama == document.getElementById("nama").value) {
       btnSlide2.disabled = false;
       alert("Anda sudah terdaftar, tidak Boleh mendaftar lebih dari satu kali!");
-    }else{
+    } else {
       btnSlide2.disabled = true;
       slide2.style.display = "none";
       slide3.style.display = "block";
@@ -64,7 +64,7 @@ function checkFormSlide2() {
 
 const diterima = document.getElementById("diterima");
 const tidakDiterima = document.getElementById("tidakDiterima");
-let dataMahasiswaArr = JSON.parse(sessionStorage.getItem('dataMahasiswaArr')) || [];
+let dataMahasiswaArr = JSON.parse(sessionStorage.getItem("dataMahasiswaArr")) || [];
 
 function showResult() {
   const ipkTerakhir = parseFloat(document.getElementById("ipk_terakhir").value);
@@ -91,10 +91,9 @@ function showResult() {
 
     // Jika berasal dari result.html, gunakan data langsung dari session storage
     if (fromResultPage) {
-      
     } else {
       dataMahasiswaArr.push(dataMahasiswa);
-      sessionStorage.setItem('dataMahasiswaArr', JSON.stringify(dataMahasiswaArr));
+      sessionStorage.setItem("dataMahasiswaArr", JSON.stringify(dataMahasiswaArr));
     }
 
     diterima.style.display = "block";
@@ -109,19 +108,17 @@ function showResult() {
   }
 }
 
-
-
 // Load the data from session storage and display it in the table
 function loadResult() {
-  const dataMahasiswaArr = JSON.parse(sessionStorage.getItem('dataMahasiswaArr'));
+  const dataMahasiswaArr = JSON.parse(sessionStorage.getItem("dataMahasiswaArr"));
 
   if (dataMahasiswaArr) {
-    const tableBody = document.querySelector('#resultTable tbody');
+    const tableBody = document.querySelector("#resultTable tbody");
     tableBody.innerHTML = "";
     console.log(tableBody);
 
     dataMahasiswaArr.forEach((data, index) => {
-      const row = document.createElement('tr');
+      const row = document.createElement("tr");
       row.innerHTML = `
         <td>${index + 1}</td>
         <td>${data.nama}</td>
@@ -138,4 +135,4 @@ function loadResult() {
 }
 
 // Call the function to load the data when the page is ready
-document.addEventListener('DOMContentLoaded', loadResult);
+document.addEventListener("DOMContentLoaded", loadResult);
