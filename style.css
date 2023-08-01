@@ -297,6 +297,25 @@ a{
 }
 /* Akhir Slide 3 */
 
+.belumVerif{
+  background-color: var(--primaryHover-color);
+  color: var(--white-color);
+  width: 150px;
+  padding: 4px 2px;
+  border-radius: 20px;
+  font-size: small;
+}
+
+.icon{
+  background-color: rgba(255, 255, 255, 0.699);
+  color: var(--primaryHover-color);
+  font-weight: 600;
+  padding: 0 6px;
+  border-radius: 100%;
+  margin-right: 5px;
+  line-height: 0;
+  font-size: small;
+}
 
 
 .slide-3,
