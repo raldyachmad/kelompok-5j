@@ -25,7 +25,6 @@ function gotoSlide(slideNumber) {
     }
   } else if (slideNumber == 3) {
     checkFormSlide2();
-    cekInputan();
   } else if (slideNumber == 1) {
     if (beasiswaItem[0].classList) slide2.style.display = "none";
     slide3.style.display = "none";
@@ -37,16 +36,24 @@ const formSlide2 = document.getElementById("formSlide2");
 const btnSlide2 = document.getElementById("btnSlide2");
 
 function checkFormSlide2() {
+  // Mendapatkan nama yang diinputkan di form
+  const nama = document.getElementById("nama").value;
+
+  // Cek apakah nama sudah ada di dalam dataMahasiswaArr
+  const isDuplicateName = dataMahasiswaArr.some((data) => data.nama === nama);
+
+  if (isDuplicateName) {
+    // Jika nama sudah ada, tampilkan pesan kesalahan dan hentikan pemrosesan lebih lanjut
+    alert("Nama sudah ada dalam dataMahasiswaArr. Mohon gunakan nama yang berbeda.");
+    return;
+  }
+
+  // Melanjutkan pemrosesan jika nama belum ada
   if (formSlide2.checkValidity()) {
-    if (dataMahasiswaArr[0].nama == document.getElementById("nama").value) {
-      btnSlide2.disabled = false;
-      alert("Anda sudah terdaftar, tidak Boleh mendaftar lebih dari satu kali!");
-    } else {
-      btnSlide2.disabled = true;
-      slide2.style.display = "none";
-      slide3.style.display = "block";
-      showResult();
-    }
+    btnSlide2.disabled = true;
+    slide2.style.display = "none";
+    slide3.style.display = "block";
+    showResult();
   } else {
     btnSlide2.disabled = false;
     alert("Form Belum Lengkap!");
@@ -110,15 +117,20 @@ function showResult() {
 
 // Load the data from session storage and display it in the table
 function loadResult() {
-  const dataMahasiswaArr = JSON.parse(sessionStorage.getItem("dataMahasiswaArr"));
+  const dataMahasiswaArr = JSON.parse(sessionStorage.getItem('dataMahasiswaArr'));
 
   if (dataMahasiswaArr) {
-    const tableBody = document.querySelector("#resultTable tbody");
+    const tableBody = document.querySelector('#resultTable tbody');
     tableBody.innerHTML = "";
-    console.log(tableBody);
 
     dataMahasiswaArr.forEach((data, index) => {
-      const row = document.createElement("tr");
+      // Manipulasi string berkas syarat untuk menghapus "C:\fakepath\"
+      const berkasSyaratWithoutFakePath = data.berkasSyarat.replace("C:\\fakepath\\", "");
+
+      // Perbarui data berkas syarat dalam objek dataMahasiswaArr
+      dataMahasiswaArr[index].berkasSyarat = berkasSyaratWithoutFakePath;
+
+      const row = document.createElement('tr');
       row.innerHTML = `
         <td>${index + 1}</td>
         <td>${data.nama}</td>
@@ -127,12 +139,17 @@ function loadResult() {
         <td>${data.semester}</td>
         <td>${data.ipkTerakhir}</td>
         <td>${data.beasiswa}</td>
-        <td>${data.berkasSyarat}</td>
+        <td>${berkasSyaratWithoutFakePath}</td>
+        <td><div class="belumVerif"><span class="icon">!</span>Belum diverifikasi</div></td>
       `;
       tableBody.appendChild(row);
     });
+
+    // Perbarui data di sessionStorage setelah dilakukan manipulasi string
+    sessionStorage.setItem('dataMahasiswaArr', JSON.stringify(dataMahasiswaArr));
   }
 }
+
 
 // Call the function to load the data when the page is ready
 document.addEventListener("DOMContentLoaded", loadResult);
