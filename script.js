@@ -44,7 +44,7 @@ function checkFormSlide2() {
 
   if (isDuplicateName) {
     // Jika nama sudah ada, tampilkan pesan kesalahan dan hentikan pemrosesan lebih lanjut
-    alert("Nama sudah ada dalam dataMahasiswaArr. Mohon gunakan nama yang berbeda.");
+    alert("Nama anda sudah terdaftar, tidak bisa mendaftar lebih dari satu kali!");
     return;
   }
 
