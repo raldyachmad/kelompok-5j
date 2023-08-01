@@ -25,6 +25,7 @@ function gotoSlide(slideNumber) {
     }
   } else if (slideNumber == 3) {
     checkFormSlide2();
+    cekInputan();
   } else if (slideNumber == 1) {
     if (beasiswaItem[0].classList) slide2.style.display = "none";
     slide3.style.display = "none";
@@ -37,10 +38,15 @@ const btnSlide2 = document.getElementById("btnSlide2");
 
 function checkFormSlide2() {
   if (formSlide2.checkValidity()) {
-    btnSlide2.disabled = true;
-    slide2.style.display = "none";
-    slide3.style.display = "block";
-    showResult();
+    if (dataMahasiswaArr[0].nama == document.getElementById("nama").value){
+      btnSlide2.disabled = false;
+      alert("Anda sudah terdaftar, tidak Boleh mendaftar lebih dari satu kali!");
+    }else{
+      btnSlide2.disabled = true;
+      slide2.style.display = "none";
+      slide3.style.display = "block";
+      showResult();
+    }
   } else {
     btnSlide2.disabled = false;
     alert("Form Belum Lengkap!");
